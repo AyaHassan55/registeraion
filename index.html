@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register & Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+
+    <!-- error, succ-->
+    <div id="messageBox" class="hidden mb-4 p-3 rounded text-sm font-medium"></div>
+
+    <!-- regi -->
+    <div id="registerSection">
+        <h2 class="text-2xl font-bold mb-6 text-center">Register</h2>
+        <input id="regName" type="text" placeholder="Name" class="w-full p-2 border rounded mb-4">
+        <input id="regEmail" type="email" placeholder="Email" class="w-full p-2 border rounded mb-4">
+        <input id="regPassword" type="password" placeholder="Password" class="w-full p-2 border rounded mb-4">
+
+        <button onclick="registerUser()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">
+        Register
+        </button>
+
+        <p class="mt-4 text-center text-sm">
+            Already have an account? 
+        <button onclick="showLogin()" class="text-blue-500 hover:underline">Login here</button>
+        </p>
+    </div>
+
+    <!-- login-->
+    <div id="loginSection" class="hidden">
+        <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+        <input id="loginEmail" type="email" placeholder="Email" class="w-full p-2 border rounded mb-4">
+        <input id="loginPassword" type="password" placeholder="Password" class="w-full p-2 border rounded mb-4">
+
+        <button onclick="loginUser()" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 transition">
+            Login
+        </button>
+
+        <p class="mt-4 text-center text-sm">
+        Don't have an account? 
+        <button onclick="showRegister()" class="text-blue-500 hover:underline">Register here</button>
+        </p>
+    </div>
+
+    <!-- prifile-->
+    <div id="profileSection" class="hidden text-center">
+        <h2 id="welcome" class="text-2xl font-bold mb-2">Welcome</h2>
+        <p id="profileEmail" class="text-gray-600"></p>
+        <p id="profilePassword" class="text-gray-600 mb-6"></p>
+        <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">
+        Logout
+        </button>
+    </div>
+
+  </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
